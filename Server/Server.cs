@@ -66,6 +66,15 @@ namespace Server
                                 Console.WriteLine("{0} has disconnected.", message.SenderConnection.Peer.Configuration.LocalAddress);
                             }
                             break;
+                        case NetIncomingMessageType.UnconnectedData:
+                            Console.WriteLine("UnconnectedData Modify");
+                            break;
+                        case NetIncomingMessageType.DiscoveryResponse:
+                            Console.WriteLine("DiscoveryResponse Modify");
+                            break;
+                        case NetIncomingMessageType.DiscoveryRequest:
+                            Console.WriteLine("DiscoveryRequest Modify");
+                            break;
                         default:
                             Console.WriteLine("Unhandled message type: {message.MessageType}");
                             break;
